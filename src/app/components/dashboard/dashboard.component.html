@@ -1,8 +1,9 @@
 <h2>Top Heroes</h2>
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-    {{hero.name}}
+  <a *ngFor="let hero of heroes; index as i" routerLink="/detail/{{hero.id}}">
+    <div style="margin:5pt;"> {{i+1}}.{{hero.name}} </div>
   </a>
 </div>
-
-<app-hero-search></app-hero-search>
+<div style="margin-top: 10pt;">
+  <app-hero-search></app-hero-search>
+</div>
